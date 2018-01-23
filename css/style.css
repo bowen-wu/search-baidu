@@ -1,0 +1,104 @@
+*{ margin:0; padding:0; }
+li{list-style: none;}
+a{color: inherit; text-decoration:none;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+.clearfix::after{content:"";display:block;clear:both;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
+ body{
+     height: 100vh;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper > label{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper > label > input[type=text]{
+    width: 536px;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 9px 7px;
+    border: 1px solid #B8B8B8;
+    border-bottom-color: #CCCCCC;
+    border-right-style: none;
+}
+.wrapper > label:hover > input[type=text]{
+    border-color: #999999;
+    border-bottom-color: #B3B3B3;
+}
+.wrapper > label > input[type=text]:focus{
+    outline: none;
+    border-color: #3388FF;
+}
+.wrapper > label > svg{
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.wrapper > label > svg:hover{
+    fill: #3388FF;
+}
+.wrapper > label > svg.voice{
+    left: 475px;
+}
+.wrapper > label > svg.camera{
+    left: 516px;
+}
+.wrapper > label > .hr{
+    width: 0;
+    border-left: 1px solid #ccc;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    left: 506px;
+}
+.wrapper > button{
+    width: 104px;
+    font-size: 16px;
+    background-color: #3388FF;
+    line-height: 20px;
+    padding: 10px 0;
+    border: none;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+.wrapper > button:hover{
+    background-color: #317EF3;
+}
+.wrapper > button > span{
+    visibility: hidden;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    transition: transform 0.8s;
+    border-radius: 50%;
+    background-color: rgb(12, 86, 250);
+    z-index: -1;
+}
+.wrapper > button.active > span{
+    visibility: visible;
+    transform: scale(200);
+}
+
+
